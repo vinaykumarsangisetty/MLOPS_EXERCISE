@@ -1,0 +1,35 @@
+Input: 
+68	0	144	193	1	141	3.4	1	0	0	0	0	1	0	1	0	0	1	0
+
+
+Prediction: 1
+
+
+Input: 
+40	0	140	289	0	172	0.0	0	1	0	0	0	1	0	1	0	0	0	1
+
+
+Prediction: 0
+
+
+
+  "Age": 68,
+  "Sex": 0,
+  "RestingBP": 144,
+  "Cholesterol": 193,
+  "FastingBS": 1,
+  "MaxHR": 141,
+  "Oldpeak": 3.4,
+  "ASY": 1,
+  "ATA": 0,
+  "NAP": 0,
+  "TA": 0,
+  "LVH": 0,
+  "Normal": 1,
+  "ST": 0,
+  "N": 1,
+  "Y": 0,
+  "Down": 0,
+  "Flat": 1,
+  "Up": 0,
+  "HeartDisease": 0
