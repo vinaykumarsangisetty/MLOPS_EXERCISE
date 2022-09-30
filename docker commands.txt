@@ -1,5 +1,5 @@
 docker build -t heart_diseases .
 
-docker run -d -p 8000:8000 heart_diseases
+docker run -d -p 7000:7000 heart_diseases
 
 

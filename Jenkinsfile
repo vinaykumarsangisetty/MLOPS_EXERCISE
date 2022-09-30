@@ -21,7 +21,7 @@ pipeline {
             
             stage('Build Docker Image') {
                 steps{
-                    sh "docker build -t heart_diseases:v1 ."
+                    sh "docker build -t heart_diseases:v1 src/app"
                 }
             }
             stage('Run Docker Image And Expose API'){

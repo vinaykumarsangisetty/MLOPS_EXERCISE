@@ -1,0 +1,659 @@
+Microsoft Windows [Version 10.0.19044.2006]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\QA592MK>java --version
+openjdk 17.0.4.1 2022-08-12
+OpenJDK Runtime Environment Temurin-17.0.4.1+1 (build 17.0.4.1+1)
+OpenJDK 64-Bit Server VM Temurin-17.0.4.1+1 (build 17.0.4.1+1, mixed mode, sharing)
+
+C:\Users\QA592MK>java -jar C:\Users\QA592MK\Downloads\jenkins.war
+Running from: C:\Users\QA592MK\Downloads\jenkins.war
+webroot: $user.home/.jenkins
+2022-09-30 05:01:31.653+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2022-09-30 05:01:37.161+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2022-09-30 05:01:37.249+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-10.0.11; built: 2022-06-21T21:12:44.640Z; git: d988aa016e0bb2de6fba84c1659049c72eae3e32; jvm 17.0.4.1+1
+2022-09-30 05:01:38.722+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2022-09-30 05:01:38.819+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2022-09-30 05:01:39.770+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: C:\Users\QA592MK\.jenkins found at: $user.home/.jenkins
+2022-09-30 05:01:40.195+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@3cec79d3{Jenkins v2.361.1,/,file:///C:/Users/QA592MK/.jenkins/war/,AVAILABLE}{C:\Users\QA592MK\.jenkins\war}
+2022-09-30 05:01:40.253+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@20c0a64d{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-09-30 05:01:40.360+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started Server@1339e7aa{STARTING}[10.0.11,sto=0] @11299ms
+2022-09-30 05:01:40.363+0000 [id=30]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2022-09-30 05:01:40.608+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-30 05:01:40.629+0000 [id=43]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-30 05:01:41.942+0000 [id=33]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-30 05:01:41.968+0000 [id=33]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-30 05:01:41.988+0000 [id=41]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-30 05:01:42.465+0000 [id=39]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-30 05:01:42.466+0000 [id=44]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-30 05:01:42.468+0000 [id=47]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-30 05:01:42.473+0000 [id=45]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-30 05:01:42.510+0000 [id=61]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Started Download metadata
+2022-09-30 05:01:42.533+0000 [id=61]    INFO    hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2022-09-30 05:01:43.463+0000 [id=37]    INFO    jenkins.install.SetupWizard#init:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+ec7b6bdf9d0f4e0bb606e6273f6e320e
+
+This may also be found at: C:\Users\QA592MK\.jenkins\secrets\initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+2022-09-30 05:01:44.143+0000 [id=61]    INFO    hudson.util.Retrier#start: The attempt #1 to do the action check updates server failed with an allowed exception:
+sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+        at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:434)
+Caused: sun.security.validator.ValidatorException: PKIX path building failed
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:439)
+        at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:306)
+        at java.base/sun.security.validator.Validator.validate(Validator.java:264)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:231)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1341)
+Caused: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:371)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:314)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:309)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1357)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1232)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1175)
+        at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:396)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:480)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:458)
+        at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:201)
+        at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505)
+        at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+        at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:580)
+        at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:187)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+        at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+        at hudson.model.DownloadService.loadJSON(DownloadService.java:122)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:219)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:214)
+        at hudson.PluginManager.checkUpdatesServer(PluginManager.java:1951)
+        at hudson.util.Retrier.start(Retrier.java:62)
+        at hudson.PluginManager.doCheckUpdatesServer(PluginManager.java:1922)
+        at jenkins.DailyCheck.execute(DailyCheck.java:93)
+        at hudson.model.AsyncPeriodicWork.lambda$doRun$1(AsyncPeriodicWork.java:102)
+        at java.base/java.lang.Thread.run(Thread.java:833)
+2022-09-30 05:01:44.145+0000 [id=61]    INFO    hudson.util.Retrier#start: Calling the listener of the allowed exception 'PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target' at the attempt #1 to do the action check updates server
+2022-09-30 05:01:44.156+0000 [id=61]    INFO    hudson.util.Retrier#start: Attempted the action check updates server for 1 time(s) with no success
+2022-09-30 05:01:44.161+0000 [id=61]    SEVERE  hudson.PluginManager#doCheckUpdatesServer: Error checking update sites for 1 attempt(s). Last exception was: SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2022-09-30 05:01:44.165+0000 [id=61]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Download metadata. 1,654 ms
+2022-09-30 05:01:44.207+0000 [id=37]    WARNING hudson.model.UpdateCenter#updateDefaultSite: Upgrading Jenkins. Failed to update the default Update Site 'default'. Plugin upgrades may fail.
+sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+        at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:434)
+Caused: sun.security.validator.ValidatorException: PKIX path building failed
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:439)
+        at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:306)
+        at java.base/sun.security.validator.Validator.validate(Validator.java:264)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:231)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1341)
+Caused: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:371)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:314)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:309)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1357)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1232)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1175)
+        at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:396)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:480)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:458)
+        at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:201)
+        at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505)
+        at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+        at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:580)
+        at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:187)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+        at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+        at hudson.model.DownloadService.loadJSON(DownloadService.java:122)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:219)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:214)
+        at hudson.model.UpdateCenter.updateDefaultSite(UpdateCenter.java:2672)
+        at jenkins.install.SetupWizard.init(SetupWizard.java:209)
+        at jenkins.install.InstallState$InitialSecuritySetup.initializeState(InstallState.java:182)
+        at jenkins.model.Jenkins.setInstallState(Jenkins.java:1133)
+        at jenkins.install.InstallUtil.proceedToNextStateFrom(InstallUtil.java:99)
+        at jenkins.install.InstallState$Unknown.initializeState(InstallState.java:88)
+        at jenkins.model.Jenkins$15.run(Jenkins.java:3499)
+        at org.jvnet.hudson.reactor.TaskGraphBuilder$TaskImpl.run(TaskGraphBuilder.java:175)
+        at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:305)
+        at jenkins.model.Jenkins$5.runTask(Jenkins.java:1160)
+        at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:222)
+        at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:121)
+        at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:70)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base/java.lang.Thread.run(Thread.java:833)
+2022-09-30 05:01:44.209+0000 [id=47]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-30 05:01:44.258+0000 [id=27]    INFO    hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2022-09-30 05:02:00.202+0000 [id=31]    INFO    winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+
+C:\Users\QA592MK>java -jar C:\Users\QA592MK\Downloads\jenkins.war
+Running from: C:\Users\QA592MK\Downloads\jenkins.war
+webroot: $user.home/.jenkins
+2022-09-30 05:02:17.126+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2022-09-30 05:02:17.234+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2022-09-30 05:02:17.391+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-10.0.11; built: 2022-06-21T21:12:44.640Z; git: d988aa016e0bb2de6fba84c1659049c72eae3e32; jvm 17.0.4.1+1
+2022-09-30 05:02:19.479+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2022-09-30 05:02:19.623+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2022-09-30 05:02:20.750+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: C:\Users\QA592MK\.jenkins found at: $user.home/.jenkins
+2022-09-30 05:02:21.009+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@2db2cd5{Jenkins v2.361.1,/,file:///C:/Users/QA592MK/.jenkins/war/,AVAILABLE}{C:\Users\QA592MK\.jenkins\war}
+2022-09-30 05:02:21.076+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@4450d156{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-09-30 05:02:21.107+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started Server@55ca8de8{STARTING}[10.0.11,sto=0] @5205ms
+2022-09-30 05:02:21.126+0000 [id=28]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2022-09-30 05:02:21.620+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-30 05:02:21.720+0000 [id=48]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-30 05:02:23.248+0000 [id=39]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-30 05:02:23.264+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-30 05:02:23.305+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-30 05:02:23.982+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-30 05:02:23.986+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-30 05:02:23.989+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-30 05:02:23.992+0000 [id=47]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-30 05:02:24.042+0000 [id=61]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Started Download metadata
+2022-09-30 05:02:24.083+0000 [id=61]    INFO    hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2022-09-30 05:02:24.495+0000 [id=34]    INFO    jenkins.install.SetupWizard#init:
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+Jenkins initial setup is required. An admin user has been created and a password generated.
+Please use the following password to proceed to installation:
+
+ec7b6bdf9d0f4e0bb606e6273f6e320e
+
+This may also be found at: C:\Users\QA592MK\.jenkins\secrets\initialAdminPassword
+
+*************************************************************
+*************************************************************
+*************************************************************
+
+2022-09-30 05:02:25.444+0000 [id=34]    WARNING hudson.model.UpdateCenter#updateDefaultSite: Upgrading Jenkins. Failed to update the default Update Site 'default'. Plugin upgrades may fail.
+sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+        at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:434)
+Caused: sun.security.validator.ValidatorException: PKIX path building failed
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:439)
+        at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:306)
+        at java.base/sun.security.validator.Validator.validate(Validator.java:264)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:231)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1341)
+Caused: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:371)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:314)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:309)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1357)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1232)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1175)
+        at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:396)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:480)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:458)
+        at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:201)
+        at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505)
+        at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+        at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:580)
+        at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:187)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+        at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+        at hudson.model.DownloadService.loadJSON(DownloadService.java:122)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:219)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:214)
+        at hudson.model.UpdateCenter.updateDefaultSite(UpdateCenter.java:2672)
+        at jenkins.install.SetupWizard.init(SetupWizard.java:209)
+        at jenkins.install.InstallState$InitialSecuritySetup.initializeState(InstallState.java:182)
+        at jenkins.model.Jenkins.setInstallState(Jenkins.java:1133)
+        at jenkins.install.InstallUtil.proceedToNextStateFrom(InstallUtil.java:99)
+        at jenkins.install.InstallState$Unknown.initializeState(InstallState.java:88)
+        at jenkins.model.Jenkins$15.run(Jenkins.java:3499)
+        at org.jvnet.hudson.reactor.TaskGraphBuilder$TaskImpl.run(TaskGraphBuilder.java:175)
+        at org.jvnet.hudson.reactor.Reactor.runTask(Reactor.java:305)
+        at jenkins.model.Jenkins$5.runTask(Jenkins.java:1160)
+        at org.jvnet.hudson.reactor.Reactor$2.run(Reactor.java:222)
+        at org.jvnet.hudson.reactor.Reactor$Node.run(Reactor.java:121)
+        at jenkins.security.ImpersonatingExecutorService$1.run(ImpersonatingExecutorService.java:70)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base/java.lang.Thread.run(Thread.java:833)
+2022-09-30 05:02:25.444+0000 [id=61]    INFO    hudson.util.Retrier#start: The attempt #1 to do the action check updates server failed with an allowed exception:
+sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.build(SunCertPathBuilder.java:141)
+        at java.base/sun.security.provider.certpath.SunCertPathBuilder.engineBuild(SunCertPathBuilder.java:126)
+        at java.base/java.security.cert.CertPathBuilder.build(CertPathBuilder.java:297)
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:434)
+Caused: sun.security.validator.ValidatorException: PKIX path building failed
+        at java.base/sun.security.validator.PKIXValidator.doBuild(PKIXValidator.java:439)
+        at java.base/sun.security.validator.PKIXValidator.engineValidate(PKIXValidator.java:306)
+        at java.base/sun.security.validator.Validator.validate(Validator.java:264)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkTrusted(X509TrustManagerImpl.java:231)
+        at java.base/sun.security.ssl.X509TrustManagerImpl.checkServerTrusted(X509TrustManagerImpl.java:132)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1341)
+Caused: javax.net.ssl.SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+        at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:131)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:371)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:314)
+        at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:309)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.checkServerCerts(CertificateMessage.java:1357)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.onConsumeCertificate(CertificateMessage.java:1232)
+        at java.base/sun.security.ssl.CertificateMessage$T13CertificateConsumer.consume(CertificateMessage.java:1175)
+        at java.base/sun.security.ssl.SSLHandshake.consume(SSLHandshake.java:396)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:480)
+        at java.base/sun.security.ssl.HandshakeContext.dispatch(HandshakeContext.java:458)
+        at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:201)
+        at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172)
+        at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505)
+        at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455)
+        at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:426)
+        at java.base/sun.net.www.protocol.https.HttpsClient.afterConnect(HttpsClient.java:580)
+        at java.base/sun.net.www.protocol.https.AbstractDelegateHttpsURLConnection.connect(AbstractDelegateHttpsURLConnection.java:187)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1665)
+        at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1589)
+        at java.base/sun.net.www.protocol.https.HttpsURLConnectionImpl.getInputStream(HttpsURLConnectionImpl.java:224)
+        at hudson.model.DownloadService.loadJSON(DownloadService.java:122)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:219)
+        at hudson.model.UpdateSite.updateDirectlyNow(UpdateSite.java:214)
+        at hudson.PluginManager.checkUpdatesServer(PluginManager.java:1951)
+        at hudson.util.Retrier.start(Retrier.java:62)
+        at hudson.PluginManager.doCheckUpdatesServer(PluginManager.java:1922)
+        at jenkins.DailyCheck.execute(DailyCheck.java:93)
+        at hudson.model.AsyncPeriodicWork.lambda$doRun$1(AsyncPeriodicWork.java:102)
+        at java.base/java.lang.Thread.run(Thread.java:833)
+2022-09-30 05:02:25.447+0000 [id=48]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-30 05:02:25.457+0000 [id=61]    INFO    hudson.util.Retrier#start: Calling the listener of the allowed exception 'PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target' at the attempt #1 to do the action check updates server
+2022-09-30 05:02:25.466+0000 [id=61]    INFO    hudson.util.Retrier#start: Attempted the action check updates server for 1 time(s) with no success
+2022-09-30 05:02:25.483+0000 [id=61]    SEVERE  hudson.PluginManager#doCheckUpdatesServer: Error checking update sites for 1 attempt(s). Last exception was: SSLHandshakeException: PKIX path building failed: sun.security.provider.certpath.SunCertPathBuilderException: unable to find valid certification path to requested target
+2022-09-30 05:02:25.492+0000 [id=61]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Download metadata. 1,440 ms
+2022-09-30 05:02:25.501+0000 [id=27]    INFO    hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2022-09-30 05:04:11.762+0000 [id=22]    INFO    hudson.PluginManager#install: Starting installation of a batch of 0 plugins plus their dependencies
+2022-09-30 05:04:11.772+0000 [id=87]    INFO    h.m.UpdateCenter$CompleteBatchJob#run: Completing installing of plugin batchà
+2022-09-30 05:04:11.832+0000 [id=89]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-30 05:04:11.837+0000 [id=94]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-30 05:04:11.840+0000 [id=98]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-30 05:04:11.843+0000 [id=103]   INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-30 05:04:11.844+0000 [id=92]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-30 05:04:11.845+0000 [id=92]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-30 05:04:11.846+0000 [id=92]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-30 05:04:11.846+0000 [id=89]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-30 05:04:11.848+0000 [id=89]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-30 05:04:11.849+0000 [id=89]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-30 05:04:11.850+0000 [id=87]    INFO    h.m.UpdateCenter$CompleteBatchJob#run: Completed installation of 0 plugins in 83 ms
+2022-09-30 05:06:27.274+0000 [id=108]   INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of skip-certificate-check on behalf of vinaykumarsangisetty
+2022-09-30 05:06:27.279+0000 [id=108]   INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading skip-certificate-check
+2022-09-30 05:06:27.717+0000 [id=108]   WARNING hudson.ClassicPluginStrategy#createClassJarFromWebInfClasses: Created C:\Users\QA592MK\.jenkins\plugins\skip-certificate-check\WEB-INF\lib\classes.jar; update plugin to a version created with a newer harness
+2022-09-30 05:06:29.385+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\mailer.jpi
+2022-09-30 05:06:29.964+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\bouncycastle-api.jpi
+2022-09-30 05:06:30.706+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\instance-identity.jpi
+2022-09-30 05:06:30.859+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\javax-mail-api.jpi
+2022-09-30 05:06:31.043+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\display-url-api.jpi
+2022-09-30 05:06:31.180+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\javax-activation-api.jpi
+2022-09-30 05:06:31.470+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\matrix-auth.jpi
+2022-09-30 05:06:31.841+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\sshd.jpi
+2022-09-30 05:06:32.355+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\windows-slaves.jpi
+2022-09-30 05:06:32.788+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\antisamy-markup-formatter.jpi
+2022-09-30 05:06:34.217+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\jquery3-api.jpi
+2022-09-30 05:06:34.610+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\plugin-util-api.jpi
+2022-09-30 05:06:35.002+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\caffeine-api.jpi
+2022-09-30 05:06:35.382+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\popper2-api.jpi
+2022-09-30 05:06:35.891+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\scm-api.jpi
+2022-09-30 05:06:36.121+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\matrix-project.jpi
+2022-09-30 05:06:36.634+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\checks-api.jpi
+2022-09-30 05:06:36.862+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\bootstrap5-api.jpi
+2022-09-30 05:06:37.560+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\workflow-api.jpi
+2022-09-30 05:06:37.828+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\echarts-api.jpi
+2022-09-30 05:06:41.465+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\snakeyaml-api.jpi
+2022-09-30 05:06:41.679+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\junit.jpi
+2022-09-30 05:06:41.941+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\workflow-support.jpi
+2022-09-30 05:06:42.195+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\font-awesome-api.jpi
+2022-09-30 05:06:42.512+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\workflow-step-api.jpi
+2022-09-30 05:06:42.713+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\script-security.jpi
+2022-09-30 05:06:42.899+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\jackson2-api.jpi
+2022-09-30 05:06:43.616+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\structs.jpi
+2022-09-30 05:06:44.113+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\command-launcher.jpi
+2022-09-30 05:06:44.538+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\jdk-tool.jpi
+2022-09-30 05:06:44.961+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\trilead-api.jpi
+2022-09-30 05:06:45.427+0000 [id=108]   INFO    hudson.PluginManager#considerDetachedPlugin: Loading a detached plugin as a dependency: C:\Users\QA592MK\.jenkins\plugins\jaxb.jpi
+2022-09-30 05:06:45.947+0000 [id=109]   INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-30 05:06:45.959+0000 [id=113]   INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-30 05:06:45.977+0000 [id=118]   INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-30 05:06:45.999+0000 [id=123]   INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-30 05:06:46.000+0000 [id=109]   INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-30 05:06:46.001+0000 [id=117]   INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-30 05:06:46.002+0000 [id=117]   INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-30 05:06:46.006+0000 [id=117]   INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-30 05:06:46.010+0000 [id=124]   INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-30 05:06:46.011+0000 [id=121]   INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-30 05:06:46.016+0000 [id=108]   INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: skip-certificate-check
+2022-09-30 05:09:04.615+0000 [id=29]    INFO    winstone.Logger#logInternal: JVM is terminating. Shutting down Jetty
+
+C:\Users\QA592MK>java -jar C:\Users\QA592MK\Downloads\jenkins.war
+Running from: C:\Users\QA592MK\Downloads\jenkins.war
+webroot: $user.home/.jenkins
+2022-09-30 05:10:25.760+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2022-09-30 05:10:25.853+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2022-09-30 05:10:26.012+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-10.0.11; built: 2022-06-21T21:12:44.640Z; git: d988aa016e0bb2de6fba84c1659049c72eae3e32; jvm 17.0.4.1+1
+2022-09-30 05:10:27.753+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2022-09-30 05:10:27.855+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2022-09-30 05:10:29.074+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: C:\Users\QA592MK\.jenkins found at: $user.home/.jenkins
+2022-09-30 05:10:29.432+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@2db2cd5{Jenkins v2.361.1,/,file:///C:/Users/QA592MK/.jenkins/war/,AVAILABLE}{C:\Users\QA592MK\.jenkins\war}
+2022-09-30 05:10:29.506+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@4450d156{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-09-30 05:10:29.533+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started Server@55ca8de8{STARTING}[10.0.11,sto=0] @4773ms
+2022-09-30 05:10:29.535+0000 [id=28]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2022-09-30 05:10:30.232+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-30 05:10:31.670+0000 [id=37]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-30 05:10:34.577+0000 [id=47]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-30 05:10:34.618+0000 [id=42]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-30 05:10:34.635+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-30 05:10:36.088+0000 [id=36]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-30 05:10:36.090+0000 [id=36]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-30 05:10:36.094+0000 [id=36]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-30 05:10:36.107+0000 [id=36]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-30 05:10:36.194+0000 [id=61]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Started Download metadata
+2022-09-30 05:10:36.258+0000 [id=61]    INFO    hudson.util.Retrier#start: Attempt #1 to do the action check updates server
+2022-09-30 05:10:36.785+0000 [id=46]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-30 05:10:36.825+0000 [id=27]    INFO    o.j.p.skipcert.ItemListenerImpl#onLoaded: Bypassing certificate check
+2022-09-30 05:10:36.911+0000 [id=27]    INFO    hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2022-09-30 05:11:00.175+0000 [id=61]    INFO    h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tasks.Maven.MavenInstaller
+2022-09-30 05:11:04.118+0000 [id=61]    INFO    h.m.DownloadService$Downloadable#load: Obtained the updated data file for hudson.tools.JDKInstaller
+2022-09-30 05:11:04.120+0000 [id=61]    INFO    hudson.util.Retrier#start: Performed the action check updates server successfully at the attempt #1
+2022-09-30 05:11:04.129+0000 [id=61]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Download metadata. 27,912 ms
+2022-09-30 05:13:08.033+0000 [id=79]    INFO    hudson.PluginManager#install: Starting installation of a batch of 7 plugins plus their dependencies
+2022-09-30 05:13:08.035+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of credentials-binding for plugin git
+2022-09-30 05:13:08.035+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of credentials for plugin credentials-binding
+2022-09-30 05:13:08.036+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of structs for plugin credentials
+2022-09-30 05:13:08.051+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of ssh-credentials for plugin credentials-binding
+2022-09-30 05:13:08.051+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of trilead-api for plugin ssh-credentials
+2022-09-30 05:13:08.052+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of plain-credentials for plugin credentials-binding
+2022-09-30 05:13:08.053+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-scm-step for plugin git
+2022-09-30 05:13:08.054+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of git-client for plugin git
+2022-09-30 05:13:08.055+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of apache-httpcomponents-client-4-api for plugin git-client
+2022-09-30 05:13:08.057+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of script-security for plugin git-client
+2022-09-30 05:13:08.062+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jsch for plugin git-client
+2022-09-30 05:13:08.066+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of scm-api for plugin git
+2022-09-30 05:13:08.068+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-step-api for plugin git
+2022-09-30 05:13:08.069+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of mailer for plugin git
+2022-09-30 05:13:08.070+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jakarta-mail-api for plugin mailer
+2022-09-30 05:13:08.070+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jakarta-activation-api for plugin jakarta-mail-api
+2022-09-30 05:13:08.071+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of instance-identity for plugin mailer
+2022-09-30 05:13:08.071+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of matrix-project for plugin git
+2022-09-30 05:13:08.072+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of okhttp-api for plugin github
+2022-09-30 05:13:08.083+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of github-api for plugin github
+2022-09-30 05:13:08.087+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of token-macro for plugin github
+2022-09-30 05:13:08.088+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-api for plugin token-macro
+2022-09-30 05:13:08.094+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jjwt-api for plugin github-branch-source
+2022-09-30 05:13:08.096+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jackson2-api for plugin jjwt-api
+2022-09-30 05:13:08.101+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of jaxb for plugin jackson2-api
+2022-09-30 05:13:08.102+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of javax-activation-api for plugin jaxb
+2022-09-30 05:13:08.104+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-support for plugin github-branch-source
+2022-09-30 05:13:08.106+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-groovy-lib for plugin pipeline-github-lib
+2022-09-30 05:13:08.114+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of cloudbees-folder for plugin pipeline-groovy-lib
+2022-09-30 05:13:08.120+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of variant for plugin pipeline-groovy-lib
+2022-09-30 05:13:08.121+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-cps for plugin pipeline-groovy-lib
+2022-09-30 05:13:08.131+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of ionicons-api for plugin workflow-cps
+2022-09-30 05:13:08.135+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of ace-editor for plugin workflow-cps
+2022-09-30 05:13:08.137+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of sshd for plugin git-server
+2022-09-30 05:13:08.138+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of mina-sshd-api-core for plugin sshd
+2022-09-30 05:13:08.149+0000 [id=79]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of mina-sshd-api-common for plugin mina-sshd-api-core
+2022-09-30 05:13:09.199+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of structs on behalf of vinaykumarsangisetty
+2022-09-30 05:13:09.201+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading structs
+2022-09-30 05:13:13.901+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of credentials on behalf of vinaykumarsangisetty
+2022-09-30 05:13:13.902+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading credentials
+2022-09-30 05:13:22.883+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of trilead-api on behalf of vinaykumarsangisetty
+2022-09-30 05:13:22.887+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading trilead-api
+2022-09-30 05:13:36.974+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of ssh-credentials on behalf of vinaykumarsangisetty
+2022-09-30 05:13:36.975+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading ssh-credentials
+2022-09-30 05:13:39.315+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of plain-credentials on behalf of vinaykumarsangisetty
+2022-09-30 05:13:39.316+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading plain-credentials
+2022-09-30 05:13:41.072+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of credentials-binding on behalf of vinaykumarsangisetty
+2022-09-30 05:13:41.073+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading credentials-binding
+2022-09-30 05:13:43.564+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-scm-step on behalf of vinaykumarsangisetty
+2022-09-30 05:13:43.565+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-scm-step
+2022-09-30 05:13:45.321+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of apache-httpcomponents-client-4-api on behalf of vinaykumarsangisetty
+2022-09-30 05:13:45.324+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading apache-httpcomponents-client-4-api
+2022-09-30 05:13:56.236+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of script-security on behalf of vinaykumarsangisetty
+2022-09-30 05:13:56.237+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading script-security
+2022-09-30 05:14:00.206+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of jsch on behalf of vinaykumarsangisetty
+2022-09-30 05:14:00.207+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jsch
+2022-09-30 05:14:04.106+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of git-client on behalf of vinaykumarsangisetty
+2022-09-30 05:14:04.106+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading git-client
+2022-09-30 05:14:18.156+0000 [id=23]    INFO    hudson.PluginManager#install: Starting installation of a batch of 18 plugins plus their dependencies
+2022-09-30 05:14:18.163+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-milestone-step for plugin workflow-aggregator
+2022-09-30 05:14:18.176+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-build-step for plugin workflow-aggregator
+2022-09-30 05:14:18.184+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-model-definition for plugin workflow-aggregator
+2022-09-30 05:14:18.191+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-model-extensions for plugin pipeline-model-definition
+2022-09-30 05:14:18.197+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-model-api for plugin pipeline-model-extensions
+2022-09-30 05:14:18.201+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-stage-step for plugin pipeline-model-extensions
+2022-09-30 05:14:18.210+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-job for plugin pipeline-model-extensions
+2022-09-30 05:14:18.213+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-multibranch for plugin pipeline-model-definition
+2022-09-30 05:14:18.216+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of branch-api for plugin workflow-multibranch
+2022-09-30 05:14:18.229+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-durable-task-step for plugin pipeline-model-definition
+2022-09-30 05:14:18.234+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of durable-task for plugin workflow-durable-task-step
+2022-09-30 05:14:18.242+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-stage-tags-metadata for plugin pipeline-model-definition
+2022-09-30 05:14:18.243+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of pipeline-input-step for plugin pipeline-model-definition
+2022-09-30 05:14:18.244+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of workflow-basic-steps for plugin pipeline-model-definition
+2022-09-30 05:14:18.262+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of handlebars for plugin pipeline-stage-view
+2022-09-30 05:14:18.265+0000 [id=23]    INFO    hudson.model.UpdateSite$Plugin#deploy: Adding dependent install of momentjs for plugin pipeline-stage-view
+2022-09-30 05:14:27.237+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of scm-api on behalf of vinaykumarsangisetty
+2022-09-30 05:14:27.238+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading scm-api
+2022-09-30 05:14:32.407+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-step-api on behalf of vinaykumarsangisetty
+2022-09-30 05:14:32.408+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-step-api
+2022-09-30 05:14:35.644+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of jakarta-activation-api on behalf of vinaykumarsangisetty
+2022-09-30 05:14:35.644+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jakarta-activation-api
+2022-09-30 05:14:37.531+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of jakarta-mail-api on behalf of vinaykumarsangisetty
+2022-09-30 05:14:37.532+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jakarta-mail-api
+2022-09-30 05:14:42.511+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of instance-identity on behalf of vinaykumarsangisetty
+2022-09-30 05:14:42.512+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading instance-identity
+2022-09-30 05:14:45.454+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of mailer on behalf of vinaykumarsangisetty
+2022-09-30 05:14:45.455+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading mailer
+2022-09-30 05:14:48.202+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of matrix-project on behalf of vinaykumarsangisetty
+2022-09-30 05:14:48.203+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading matrix-project
+2022-09-30 05:14:52.007+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of git on behalf of vinaykumarsangisetty
+2022-09-30 05:14:52.007+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading git
+2022-09-30 05:14:58.894+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of okhttp-api on behalf of vinaykumarsangisetty
+2022-09-30 05:14:58.901+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading okhttp-api
+2022-09-30 05:15:13.313+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of github-api on behalf of vinaykumarsangisetty
+2022-09-30 05:15:13.314+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading github-api
+2022-09-30 05:15:22.501+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-api on behalf of vinaykumarsangisetty
+2022-09-30 05:15:22.501+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-api
+2022-09-30 05:15:27.307+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of token-macro on behalf of vinaykumarsangisetty
+2022-09-30 05:15:27.308+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading token-macro
+2022-09-30 05:15:34.618+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of github on behalf of vinaykumarsangisetty
+2022-09-30 05:15:34.619+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading github
+2022-09-30 05:15:41.670+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of git-client on behalf of vinaykumarsangisetty
+2022-09-30 05:15:41.670+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Git client@3.12.1
+2022-09-30 05:15:41.672+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: git-client
+2022-09-30 05:15:41.674+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of github-api on behalf of vinaykumarsangisetty
+2022-09-30 05:15:41.677+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: GitHub API@1.303-400.v35c2d8258028
+2022-09-30 05:15:41.678+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: github-api
+2022-09-30 05:15:41.679+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of javax-activation-api on behalf of vinaykumarsangisetty
+2022-09-30 05:15:41.681+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading javax-activation-api
+2022-09-30 05:15:44.304+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of jaxb on behalf of vinaykumarsangisetty
+2022-09-30 05:15:44.305+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jaxb
+2022-09-30 05:15:52.237+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of jackson2-api on behalf of vinaykumarsangisetty
+2022-09-30 05:15:52.238+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jackson2-api
+2022-09-30 05:16:12.115+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of jjwt-api on behalf of vinaykumarsangisetty
+2022-09-30 05:16:12.116+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading jjwt-api
+2022-09-30 05:16:16.112+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-support on behalf of vinaykumarsangisetty
+2022-09-30 05:16:16.112+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-support
+2022-09-30 05:16:20.269+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of github-branch-source on behalf of vinaykumarsangisetty
+2022-09-30 05:16:20.270+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading github-branch-source
+2022-09-30 05:16:24.345+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of cloudbees-folder on behalf of vinaykumarsangisetty
+2022-09-30 05:16:24.345+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading cloudbees-folder
+2022-09-30 05:16:28.068+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of variant on behalf of vinaykumarsangisetty
+2022-09-30 05:16:28.069+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading variant
+2022-09-30 05:16:31.095+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of ionicons-api on behalf of vinaykumarsangisetty
+2022-09-30 05:16:31.096+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading ionicons-api
+2022-09-30 05:16:36.487+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of ace-editor on behalf of vinaykumarsangisetty
+2022-09-30 05:16:36.488+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading ace-editor
+2022-09-30 05:16:58.759+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-cps on behalf of vinaykumarsangisetty
+2022-09-30 05:16:58.760+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-cps
+2022-09-30 05:17:04.918+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-groovy-lib on behalf of vinaykumarsangisetty
+2022-09-30 05:17:04.919+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-groovy-lib
+2022-09-30 05:17:14.771+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-github-lib on behalf of vinaykumarsangisetty
+2022-09-30 05:17:14.771+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-github-lib
+2022-09-30 05:17:17.020+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of mina-sshd-api-common on behalf of vinaykumarsangisetty
+2022-09-30 05:17:17.021+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading mina-sshd-api-common
+2022-09-30 05:17:23.576+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of mina-sshd-api-core on behalf of vinaykumarsangisetty
+2022-09-30 05:17:23.577+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading mina-sshd-api-core
+2022-09-30 05:17:30.492+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of sshd on behalf of vinaykumarsangisetty
+2022-09-30 05:17:30.493+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading sshd
+2022-09-30 05:17:33.394+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of git-server on behalf of vinaykumarsangisetty
+2022-09-30 05:17:33.395+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading git-server
+2022-09-30 05:17:35.254+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-milestone-step on behalf of vinaykumarsangisetty
+2022-09-30 05:17:35.254+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-milestone-step
+2022-09-30 05:17:37.085+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-build-step on behalf of vinaykumarsangisetty
+2022-09-30 05:17:37.085+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-build-step
+2022-09-30 05:17:39.006+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-api on behalf of vinaykumarsangisetty
+2022-09-30 05:17:39.007+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-model-api
+2022-09-30 05:17:55.034+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-stage-step on behalf of vinaykumarsangisetty
+2022-09-30 05:17:55.036+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-stage-step
+2022-09-30 05:17:57.199+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-job on behalf of vinaykumarsangisetty
+2022-09-30 05:17:57.214+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-job
+2022-09-30 05:18:00.400+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-extensions on behalf of vinaykumarsangisetty
+2022-09-30 05:18:00.402+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-model-extensions
+2022-09-30 05:18:03.117+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of branch-api on behalf of vinaykumarsangisetty
+2022-09-30 05:18:03.120+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading branch-api
+2022-09-30 05:18:08.819+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-multibranch on behalf of vinaykumarsangisetty
+2022-09-30 05:18:08.873+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-multibranch
+2022-09-30 05:18:12.179+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of durable-task on behalf of vinaykumarsangisetty
+2022-09-30 05:18:12.182+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading durable-task
+2022-09-30 05:18:40.597+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-durable-task-step on behalf of vinaykumarsangisetty
+2022-09-30 05:18:40.599+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-durable-task-step
+2022-09-30 05:18:43.315+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-stage-tags-metadata on behalf of vinaykumarsangisetty
+2022-09-30 05:18:43.322+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-stage-tags-metadata
+2022-09-30 05:18:45.581+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-input-step on behalf of vinaykumarsangisetty
+2022-09-30 05:18:45.654+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-input-step
+2022-09-30 05:18:47.536+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-basic-steps on behalf of vinaykumarsangisetty
+2022-09-30 05:18:47.537+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-basic-steps
+2022-09-30 05:18:50.643+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-definition on behalf of vinaykumarsangisetty
+2022-09-30 05:18:50.652+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-model-definition
+2022-09-30 05:19:00.110+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-aggregator on behalf of vinaykumarsangisetty
+2022-09-30 05:19:00.143+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading workflow-aggregator
+2022-09-30 05:19:02.294+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-scm-step on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.295+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: SCM Step@400.v6b_89a_1317c9a_
+2022-09-30 05:19:02.303+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-scm-step
+2022-09-30 05:19:02.306+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-job on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.321+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Job@1239.v71b_b_a_124a_725
+2022-09-30 05:19:02.330+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-job
+2022-09-30 05:19:02.358+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-cps on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.362+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Groovy@2802.v5ea_628154b_c2
+2022-09-30 05:19:02.365+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-cps
+2022-09-30 05:19:02.370+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-durable-task-step on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.386+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Nodes and Processes@1199.v02b_9244f8064
+2022-09-30 05:19:02.390+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-durable-task-step
+2022-09-30 05:19:02.393+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-basic-steps on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.403+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Basic Steps@994.vd57e3ca_46d24
+2022-09-30 05:19:02.407+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-basic-steps
+2022-09-30 05:19:02.413+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-stage-step on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.429+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Stage Step@296.v5f6908f017a_5
+2022-09-30 05:19:02.456+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-stage-step
+2022-09-30 05:19:02.469+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of workflow-multibranch on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.481+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Multibranch@716.vc692a_e52371b_
+2022-09-30 05:19:02.488+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: workflow-multibranch
+2022-09-30 05:19:02.492+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-input-step on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.511+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Input Step@451.vf1a_a_4f405289
+2022-09-30 05:19:02.513+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-input-step
+2022-09-30 05:19:02.642+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-build-step on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.662+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Build Step@2.18
+2022-09-30 05:19:02.672+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-build-step
+2022-09-30 05:19:02.676+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-stage-tags-metadata on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.679+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Stage Tags Metadata@2.2114.v2654ca_721309
+2022-09-30 05:19:02.704+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-stage-tags-metadata
+2022-09-30 05:19:02.712+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-api on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.720+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Model API@2.2114.v2654ca_721309
+2022-09-30 05:19:02.740+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-model-api
+2022-09-30 05:19:02.757+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-milestone-step on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.773+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Milestone Step@101.vd572fef9d926
+2022-09-30 05:19:02.780+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-milestone-step
+2022-09-30 05:19:02.912+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-extensions on behalf of vinaykumarsangisetty
+2022-09-30 05:19:02.973+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Declarative Extension Points API@2.2114.v2654ca_721309
+2022-09-30 05:19:03.030+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-model-extensions
+2022-09-30 05:19:03.045+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-graph-analysis on behalf of vinaykumarsangisetty
+2022-09-30 05:19:03.091+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-graph-analysis
+2022-09-30 05:19:04.713+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-model-definition on behalf of vinaykumarsangisetty
+2022-09-30 05:19:04.775+0000 [id=86]    INFO    h.m.UpdateCenter$InstallationJob#_run: Skipping duplicate install of: Pipeline: Declarative@2.2114.v2654ca_721309
+2022-09-30 05:19:04.835+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Installation successful: pipeline-model-definition
+2022-09-30 05:19:05.109+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-rest-api on behalf of vinaykumarsangisetty
+2022-09-30 05:19:05.155+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-rest-api
+2022-09-30 05:19:07.734+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of handlebars on behalf of vinaykumarsangisetty
+2022-09-30 05:19:07.736+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading handlebars
+2022-09-30 05:19:10.164+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of momentjs on behalf of vinaykumarsangisetty
+2022-09-30 05:19:10.180+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading momentjs
+2022-09-30 05:19:12.444+0000 [id=86]    INFO    h.model.UpdateCenter$DownloadJob#run: Starting the installation of pipeline-stage-view on behalf of vinaykumarsangisetty
+2022-09-30 05:19:12.446+0000 [id=86]    INFO    h.m.UpdateCenter$UpdateCenterConfiguration#download: Downloading pipeline-stage-view
+
+C:\Users\QA592MK>java -jar C:\Users\QA592MK\Downloads\jenkins.war
+Running from: C:\Users\QA592MK\Downloads\jenkins.war
+webroot: $user.home/.jenkins
+2022-09-30 05:20:06.256+0000 [id=1]     INFO    winstone.Logger#logInternal: Beginning extraction from war file
+2022-09-30 05:20:06.523+0000 [id=1]     WARNING o.e.j.s.handler.ContextHandler#setContextPath: Empty contextPath
+2022-09-30 05:20:06.857+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: jetty-10.0.11; built: 2022-06-21T21:12:44.640Z; git: d988aa016e0bb2de6fba84c1659049c72eae3e32; jvm 17.0.4.1+1
+2022-09-30 05:20:10.966+0000 [id=1]     INFO    o.e.j.w.StandardDescriptorProcessor#visitServlet: NO JSP Support for /, did not find org.eclipse.jetty.jsp.JettyJspServlet
+2022-09-30 05:20:11.207+0000 [id=1]     INFO    o.e.j.s.s.DefaultSessionIdManager#doStart: Session workerName=node0
+2022-09-30 05:20:12.926+0000 [id=1]     INFO    hudson.WebAppMain#contextInitialized: Jenkins home directory: C:\Users\QA592MK\.jenkins found at: $user.home/.jenkins
+2022-09-30 05:20:13.572+0000 [id=1]     INFO    o.e.j.s.handler.ContextHandler#doStart: Started w.@2db2cd5{Jenkins v2.361.1,/,file:///C:/Users/QA592MK/.jenkins/war/,AVAILABLE}{C:\Users\QA592MK\.jenkins\war}
+2022-09-30 05:20:14.336+0000 [id=1]     INFO    o.e.j.server.AbstractConnector#doStart: Started ServerConnector@4450d156{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+2022-09-30 05:20:14.450+0000 [id=1]     INFO    org.eclipse.jetty.server.Server#doStart: Started Server@55ca8de8{STARTING}[10.0.11,sto=0] @10541ms
+2022-09-30 05:20:14.680+0000 [id=30]    INFO    winstone.Logger#logInternal: Winstone Servlet Engine running: controlPort=disabled
+2022-09-30 05:20:15.991+0000 [id=35]    INFO    jenkins.InitReactorRunner$1#onAttained: Started initialization
+2022-09-30 05:21:19.490+0000 [id=46]    INFO    jenkins.InitReactorRunner$1#onAttained: Listed all plugins
+2022-09-30 05:21:50.489+0000 [id=40]    INFO    jenkins.InitReactorRunner$1#onAttained: Prepared all plugins
+2022-09-30 05:21:50.734+0000 [id=40]    INFO    jenkins.InitReactorRunner$1#onAttained: Started all plugins
+2022-09-30 05:21:51.249+0000 [id=43]    INFO    jenkins.InitReactorRunner$1#onAttained: Augmented all extensions
+2022-09-30 05:21:57.579+0000 [id=48]    INFO    jenkins.InitReactorRunner$1#onAttained: System config loaded
+2022-09-30 05:21:57.659+0000 [id=38]    INFO    jenkins.InitReactorRunner$1#onAttained: System config adapted
+2022-09-30 05:21:57.733+0000 [id=44]    INFO    jenkins.InitReactorRunner$1#onAttained: Loaded all jobs
+2022-09-30 05:21:57.815+0000 [id=43]    INFO    jenkins.InitReactorRunner$1#onAttained: Configuration for all jobs updated
+2022-09-30 05:21:58.075+0000 [id=71]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Started Download metadata
+2022-09-30 05:21:58.150+0000 [id=71]    INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Download metadata. 24 ms
+2022-09-30 05:21:58.484+0000 [id=41]    INFO    jenkins.InitReactorRunner$1#onAttained: Completed initialization
+2022-09-30 05:21:58.645+0000 [id=27]    INFO    o.j.p.skipcert.ItemListenerImpl#onLoaded: Bypassing certificate check
+2022-09-30 05:21:58.966+0000 [id=27]    INFO    hudson.lifecycle.Lifecycle#onReady: Jenkins is fully up and running
+2022-09-30 05:22:55.415+0000 [id=56]    WARNING hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb 28ca8971f263a2be0240d3d9f412d254335db436cbab352d5169d80d25736622. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+2022-09-30 05:22:55.424+0000 [id=61]    WARNING hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb 28ca8971f263a2be0240d3d9f412d254335db436cbab352d5169d80d25736622. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+2022-09-30 05:22:55.609+0000 [id=56]    WARNING hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /ajaxBuildQueue by vinaykumarsangisetty. Returning 403.
+2022-09-30 05:22:56.161+0000 [id=61]    WARNING hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /ajaxExecutors by vinaykumarsangisetty. Returning 403.
+2022-09-30 05:23:00.408+0000 [id=66]    WARNING hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb 28ca8971f263a2be0240d3d9f412d254335db436cbab352d5169d80d25736622. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+2022-09-30 05:23:00.418+0000 [id=64]    WARNING hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb 28ca8971f263a2be0240d3d9f412d254335db436cbab352d5169d80d25736622. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+2022-09-30 05:23:00.449+0000 [id=66]    WARNING hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /ajaxBuildQueue by vinaykumarsangisetty. Returning 403.
+2022-09-30 05:23:00.784+0000 [id=64]    WARNING hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /ajaxExecutors by vinaykumarsangisetty. Returning 403.
+2022-09-30 05:23:06.177+0000 [id=18]    WARNING hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb 28ca8971f263a2be0240d3d9f412d254335db436cbab352d5169d80d25736622. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+2022-09-30 05:23:06.275+0000 [id=18]    WARNING hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /ajaxBuildQueue by vinaykumarsangisetty. Returning 403.
+2022-09-30 05:23:06.221+0000 [id=23]    WARNING hudson.security.csrf.CrumbFilter#doFilter: Found invalid crumb 28ca8971f263a2be0240d3d9f412d254335db436cbab352d5169d80d25736622. If you are calling this URL with a script, please use the API Token instead. More information: https://www.jenkins.io/redirect/crumb-cannot-be-used-for-script
+2022-09-30 05:23:07.225+0000 [id=23]    WARNING hudson.security.csrf.CrumbFilter#doFilter: No valid crumb was included in request for /ajaxExecutors by vinaykumarsangisetty. Returning 403.
+2022-09-30 05:29:17.335+0000 [id=122]   INFO    h.triggers.SCMTrigger$Runner#run: SCM changes detected in hds_predictions. Triggering  #2
+2022-09-30 05:49:03.381+0000 [id=409]   INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Started Periodic background build discarder
+2022-09-30 05:49:03.411+0000 [id=409]   INFO    hudson.model.AsyncPeriodicWork#lambda$doRun$1: Finished Periodic background build discarder. 25 ms
